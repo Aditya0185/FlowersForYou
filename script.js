@@ -5,7 +5,7 @@ window.onload = () => {
   }, 1000);
 
  
-  const message = "Hey Abhisha, All the best for your exams 💐. Hope every paper goes amazing — just like you. ✨";
+  const message = "Hey Abhisha, All the best for your exams 💐. Hope your every paper goes amazing — just like you. ✨";
   
 
   const target = document.getElementById("congrats-text");
@@ -27,3 +27,4 @@ window.onload = () => {
 
   setTimeout(typeCharacter, 1000); 
 };
+
