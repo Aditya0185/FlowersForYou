@@ -981,21 +981,23 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
 
 .congrats-message {
   position: absolute;
-  top: 60px; /* Pushes text down from top */
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 24px;       /* Larger font */
-  font-style: italic;     /* Italic */
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-style: italic;
   font-weight: bold;
   text-align: center;
-  padding: 20px;
+  padding: 12px 16px;
   max-width: 90%;
+  line-height: 1.4;
   color: white;
   background: linear-gradient(to right, #ff4b4b, #ff0000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: pre-wrap;
-  z-index: 10; /* ensures it's above flowers */
+  z-index: 999;
+  will-change: contents;
 }
 
 
@@ -1005,3 +1007,32 @@ mask-image: linear-gradient(to top, transparent 40%, #079097 80%) !important;
   }
 }
 
+@media (max-width: 768px) {
+  .flowers {
+    transform: scale(0.55);
+  }
+
+  .night {
+    filter: blur(0);
+  }
+
+  .flower__light,
+  .long-g--6,
+  .long-g--7,
+  .flower__grass__overlay {
+    display: none;
+  }
+
+  .flower--1,
+  .flower--2,
+  .flower--3,
+  .flower__grass--1,
+  .flower__grass--2,
+  .flower__g-right--1,
+  .flower__g-right--2,
+  .flower__g-front,
+  .flower__g-fr,
+  .long-g .leaf {
+    animation-duration: 6s !important;
+  }
+}
